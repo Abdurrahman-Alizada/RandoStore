@@ -27,12 +27,10 @@ function AllProducts() {
             key={index}
             className="max-w-xs overflow-hidden bg-white rounded-lg shadow-xl border border-gray-300 "
           >
-            {/* we normaly do not do like this. we receive img url and make it src. here we receive images link that is in another directory so I did like this for convenience */}
             <img
               className="object-cover w-full h-48 "
-              // src={product?.imgURL}   // normal way
-              src={`/products/${product.id}.jpg`}
-              alt={product?.name || "product image"}
+              src={product?.img}  
+               alt={product?.name || "product image"}
             />
 
             <div className="px-4 py-2 bg-indigo-400">

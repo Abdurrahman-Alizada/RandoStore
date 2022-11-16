@@ -7,23 +7,23 @@ function Cart() {
   const [products, setProducts] = useState([]);
   const [flagOfChange, setFlagOfChange] = useState(false);
 
-  const getAllProducts =()=>{
-   setFlagOfChange(false)
-   setProducts(JSON.parse(localStorage.getItem("products")) || []);
-  }
+  const getAllProducts = () => {
+    setFlagOfChange(false);
+    setProducts(JSON.parse(localStorage.getItem("products")) || []);
+  };
 
   const removeItemFromCart = (id) => {
     products.splice(id, 1);
-    localStorage.setItem('products', JSON.stringify(products)); 
-    setFlagOfChange(true); 
+    localStorage.setItem("products", JSON.stringify(products));
+    setFlagOfChange(true);
   };
 
-  useEffect(()=>{
-   getAllProducts();
-  },[flagOfChange])
+  useEffect(() => {
+    getAllProducts();
+  }, [flagOfChange]);
   return (
     <div className="flex self-center flex-col px-20 py-10 bg-white items-center">
-      {products.length > 0  ? (
+      {products.length > 0 ? (
         <div className="w-1/2">
           <div className="flex-1 w-full overflow-y-auto py-6 px-4 sm:px-6 ">
             <div className="flex w-full justify-between">
@@ -42,8 +42,8 @@ function Cart() {
                     <li className="flex py-6" key={index}>
                       <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                         <img
-                          src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg"
-                          alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt."
+                          src={product?.img}
+                          alt=""
                           className="h-full w-full object-cover object-center"
                         />
                       </div>

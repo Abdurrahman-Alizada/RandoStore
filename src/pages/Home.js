@@ -24,7 +24,7 @@ function Home() {
                 Browse Products
               </Link>
               <Link
-                to="products"
+                to="add-new-product"
                 className="block px-6 py-2.5 text-sm font-medium tracking-wider text-center text-gray-700 uppercase transition-colors duration-300 transform bg-gray-200 rounded-md lg:mx-4 hover:bg-gray-300"
               >
                 List your product
@@ -35,7 +35,7 @@ function Home() {
         <div className="w-full h-64 lg:w-1/2 lg:h-auto">
           <img
             className="w-full object-cover h-screen"
-            src="https://images.unsplash.com/photo-1508394522741-82ac9c15ba69?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=748&q=80"
+            src="https://images.unsplash.com/photo-1570857502809-08184874388e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c2hvcHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
             alt=""
           />
           {/* <div className="w-full h-full bg-black opacity-25"></div> */}
